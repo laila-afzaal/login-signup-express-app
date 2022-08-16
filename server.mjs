@@ -2,7 +2,7 @@ import express from 'express'
 import cors from "cors"
 
 app.use(express.json());
-const app = express()
+const app = express();
 app.use(cors());
 
 app.get('/', (req, res) => {
