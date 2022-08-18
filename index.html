@@ -78,7 +78,7 @@
 
       .catch(function (error) {
       console.log(error.response.data);
-      document.querySelector('#message').innerHTML = error.data.message;
+      document.querySelector('#message').innerHTML = error.response.data.message;
       });
     }
 
