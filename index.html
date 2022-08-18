@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <link rel="stylesheet" href="style.css">
   <title>Login/Signup</title>
 </head>
@@ -16,7 +16,7 @@
   <form onsubmit="signup(); return false">
 
     <label for="firstName">First Name</label>
-    <input type="text" id="firstName" required>
+    <input type="text" id="firstName" required autofocus>
  
     <br>
     <br>
@@ -46,8 +46,9 @@
   </form>
 
   <p id="message"></p>
-  </div>
-
+  
+  <div class="log"><p>Already have an account?</p><a href="login.html">Login</a></div>
+</div>
   <script>
 
     function signup(){
@@ -73,12 +74,12 @@
 
       .then(function (response) {
       console.log(response.data);
-      document.querySelector('#message').innerHTML = response.data.message;
+      document.querySelector('#message').innerHTML = response.data;
       })
 
       .catch(function (error) {
-      console.log(error.response.data);
-      document.querySelector('#message').innerHTML = error.response.data.message;
+      console.log(error.data);
+      document.querySelector('#message').innerHTML = error.data.message;
       });
     }
 

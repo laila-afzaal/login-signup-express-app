@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+<body>
+  <div class="log-in">
+
+    <h1>Login</h1>
+
+  <form onsubmit="signup(); return false">
+  <label for="email">Email</label>
+  <input type="email" id="email2" required autofocus>
+
+  <br>
+  <br>
+  <label for="password">Password</label>
+  <input type="password" id="password2" required>
+
+  <br>
+  <br>
+  <button type="submit" value="Login">Login</button>
+
+  </form>
+
+  <p id="message2"></p>
+
+  <p>Create A New Account!</p><a href="index.html">Signup</a>
+</div>
+
+<script>
+
+  function login(){
+
+    var email2 = document.querySelector('#email2').value;
+    var password2 = document.querySelector('#password2').value;
+
+    if(email !== email2){
+      document.querySelector('#message2').innerHTML = `Email dosen't exist`;
+      return;
+    }
+
+    axios.post('https://login-signup-express-app.herokuapp.com/login', {
+
+      email2,
+      password2
+    })
+
+    .then(function (response) {
+    console.log(response.data);
+    document.querySelector('#message2').innerHTML = response.data;
+    })
+
+    .catch(function (error) {
+    console.log(error.data);
+    document.querySelector('#message2').innerHTML = error.response.data.message;
+    });
+  }
+
+</script>
+</body>
+</html>
