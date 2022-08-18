@@ -13,15 +13,15 @@
 
     <h1>Login</h1>
 
-  <form onsubmit="signup(); return false">
+  <form onsubmit="login(); return false">
 
   <label for="email">Email</label>
-  <input type="email" id="email2" required autofocus>
+  <input type="email" id="email" required autofocus>
 
   <br>
   <br>
   <label for="password">Password</label>
-  <input type="password" id="password2" required>
+  <input type="password" id="password" required>
 
   <br>
   <br>
@@ -38,18 +38,18 @@
 
   function login(){
 
-    var email2 = document.querySelector('#email2').value;
-    var password2 = document.querySelector('#password2').value;
+    var email = document.querySelector('#email').value;
+    var password = document.querySelector('#password').value;
 
-    if(email !== email2){
-      document.querySelector('#message2').innerHTML = `Email doesn't exist`;
+    if(email == '' || password == ''){
+      document.querySelector('#message2').innerHTML = `Please fill all input feilds`;
       return;
     }
 
     axios.post('https://login-signup-express-app.herokuapp.com/login', {
 
-      email2,
-      password2
+      email,
+      password
     })
 
     .then(function (response) {

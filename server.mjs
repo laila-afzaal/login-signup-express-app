@@ -4,7 +4,6 @@ import { nanoid } from 'nanoid'
 
 const app = express();
 app.use(express.json());
-
 app.use(cors());
 
 let userBase = [];
@@ -61,7 +60,7 @@ app.post(`/login`,(req, res) => {
 
   let body = req.body;
 
-  if(!body.email2 || !body.password2){
+  if(!body.email || !body.password){
    res.status(400).send(
     `required fields missing, request example:
      {
@@ -75,10 +74,10 @@ app.post(`/login`,(req, res) => {
 let isFound = false;
 
 for(let i = 0; i < userBase.length; i++){
-  if(userBase[i].email2 === body.email2){
+  if(userBase[i].email === body.email){
 
     isFound = true;
-    if(userBase[i].password === body.password2) {
+    if(userBase[i].password === body.password) {
 
       res.status(200).send({
         firstName: userBase[i].firstName,
