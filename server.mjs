@@ -2,9 +2,9 @@ import express from 'express'
 import cors from "cors"
 import { nanoid } from 'nanoid'
 
-
-app.use(express.json());
 const app = express();
+app.use(express.json());
+
 app.use(cors());
 
 let userBase = [];
