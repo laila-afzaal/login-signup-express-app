@@ -58,7 +58,7 @@
       var password = document.querySelector('#password').value;
       var passwordRepeat = document.querySelector('#passwordRepeat').value;
 
-      if(password != passwordRepeat){
+      if(password !== passwordRepeat){
         document.querySelector('#message').innerHTML = `Password do not match, please try again`;
         return;
       }
