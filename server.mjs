@@ -4,7 +4,8 @@ import { nanoid } from 'nanoid'
 import mongoose from 'mongoose';
 
 /////////////////////-MongoDB Connecting Code-////////////////////////////////
-//boiler plate from : https://github.com/mInzamamMalik/salesman-app/blob/master/index.ts
+//boiler plate from : https://github.com/mInzamamMalik/MERN-Stack-Web-Development-Class/blob/main/03.%20nodejs/7.%20express%20login%20signup%20with%20database/server.mjs
+
 let dbURI = 'mongodb+srv://abc:123@cluster0.zwm89fi.mongodb.net/socialMediaBase?retryWrites=true&w=majority';
 // let dbURI = 'mongodb://localhost/mydatabase';
 mongoose.connect(dbURI);
