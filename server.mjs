@@ -83,14 +83,14 @@ for(let i = 0; i < userBase.length; i++){
         firstName: userBase[i].firstName,
         lastName: userBase[i].lastName,
         email: userBase[i].email,
-        message: "login successful",
-        token: "some unique token"
+        message2: "login successful",
+        // token: "some unique token"
       })
       return;
 
     } else {
       res.status(401).send({
-        message: "Incorrect password"
+        message2: "Incorrect password"
       })
       return;
     }
@@ -99,7 +99,7 @@ for(let i = 0; i < userBase.length; i++){
 
 if(!isFound){
   res.status(404).send({
-    message: "user not found"
+    message2: "user not found"
   })
   return;
 }
