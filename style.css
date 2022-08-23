@@ -1,8 +1,13 @@
 body{
   text-align: center;
   font-size: 25px;
-  background-image: linear-gradient(to right top, #00c9aa, #48d3b7, #6addc5, #87e6d2, #a2f0df, #a4eadc, #a6e4d8, #a8ded4, #93c8bf, #7fb2ab, #6b9d97, #578883);
+  /* background-color: #00c9aa; */
+  background-color: #7fb2ab; 
 }
+/* #00c9aa */
+/* #48d3b7 */
+/* #87e6d2 */
+/* #7fb2ab */
 h1{
   padding: 5px;
   font-weight: 400;
@@ -66,4 +71,35 @@ input{
   background-color:#659B90;
   color: white;
   align-self: center;
+}
+
+@media only screen and (max-width: 425px) {
+  h1{
+    font-size: 33px;
+  }
+  body {
+    max-width: 90%;
+    font-size: 17px;
+  }
+  .signupform{
+    margin: 5px;
+  }
+  input{
+    font-size: 16px;
+  }
+  button{
+    font-size: 18px;
+
+  }
+  .log > p {
+    display: flex;
+    flex-flow: row wrap; 
+  }
+  .log > a {
+    display: flex;
+    flex-flow: row wrap; 
+  }
+  label{
+    font-size: 17px;
+  }
 }
