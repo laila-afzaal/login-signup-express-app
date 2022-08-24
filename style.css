@@ -1,6 +1,6 @@
 body{
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   /* background-color: #00c9aa; */
   background-color: #7fb2ab; 
 }
@@ -72,24 +72,69 @@ input{
   color: white;
   align-self: center;
 }
-
-@media only screen and (max-width: 425px) {
+.lbl1{
+  margin-right: 170px;
+}
+.lbl2{
+  margin-right: 170px;
+}
+.lbl3{
+  margin-right: 215px;
+}
+.lbl4{
+  margin-right: 180px;
+}
+.lbl5{
+  margin-right: 110px;
+}
+.lbl01{
+  padding-right: 210px;
+}
+.lbl02{
+  padding-right: 174px;
+}
+.form-input{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+input{
+  border-radius: 5px;
+  padding: 7px 0px 7px 0px;
+  margin-left: 10px;
+  padding-left: 45px;
+  margin-bottom: -40px;
+}
+i{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-left: -210px;
+  color: black;
+  margin-right: 30px;
+  margin-bottom: -37px;
+}
+@media only screen and (width: 425px) and (width: 375px) {
   h1{
     font-size: 33px;
   }
   body {
     max-width: 90%;
-    font-size: 17px;
+    font-size: 16px;
   }
   .signupform{
     margin: 5px;
+    margin-left: -300px;
   }
   input{
     font-size: 16px;
   }
   button{
     font-size: 18px;
-
   }
   .log > p {
     display: flex;
@@ -100,6 +145,6 @@ input{
     flex-flow: row wrap; 
   }
   label{
-    font-size: 17px;
+    font-size: 14px;
   }
 }
