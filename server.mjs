@@ -13,8 +13,8 @@ app.use(cors());
 
 // let userBase = [];
 const userSchema = new mongoose.Schema({
-  firstname: { type: String },
-  lastname: { type: String },
+  firstName: { type: String },
+  lastName: { type: String },
   email: { type: String, required: true },
   password: { type: String, required: true },
 
